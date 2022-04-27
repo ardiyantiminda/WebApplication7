@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\App_Data",
+    "\\Controllers",
+    "\\Views",
+    "\\Views\\Mahasiswa",
+    "\\Views\\Manage",
+    "\\Views\\Shared",
+    "\\Views\\Siswa"
+  ],
+  "SelectedNode": "\\Controllers\\MahasiswaController.cs",
+  "PreviewInSolutionExplorer": false
+}

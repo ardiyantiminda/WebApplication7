@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebApplication7.Entities.Siswa>
+
+@{
+    Layout = "~/Views/Shared/_minda.cshtml";
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NIM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TanggalLahir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JenisKelamin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alamat)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NIM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TanggalLahir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JenisKelamin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alamat)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { nim = item.NIM }) |
+                @Html.ActionLink("Details", "Details", new { nim = item.NIM }) |
+                @Html.ActionLink("Delete", "Delete", new { nim = item.NIM })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Siswa_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Siswa">
+    <Key>
+      <PropertyRef Name="NIM" />
+    </Key>
+    <Property Name="NIM" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Nama" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TanggalLahir" Type="date" Nullable="false" />
+    <Property Name="JenisKelamin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Alamat" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="Siswa_DBModelStoreContainer">
+    <EntitySet Name="Siswa" EntityType="Self.Siswa" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
